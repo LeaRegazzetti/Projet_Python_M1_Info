@@ -5,7 +5,6 @@ import tkinter as tk
 import tkinter.ttk as ttk
 import ModuleCreationCorpus as MCC
 import ModuleGraphe as MG
-import sys
 
 class Interface:
     def __init__(self):
@@ -64,4 +63,4 @@ class Interface:
         self.df = MCC.Creation(self.thematique)[1]
         MG.Grap(self.df[self.idx])
         self.fenetre.destroy()
-        sys.exit()
+        

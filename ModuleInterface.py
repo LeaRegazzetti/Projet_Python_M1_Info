@@ -6,7 +6,7 @@ import tkinter.ttk as ttk
 import ModuleCreationCorpus as MCC
 import ModuleGraphe as MG
 
-class Interface:
+class Interface():
     def __init__(self):
         #Création de la fenêtre
         self.fenetre = tk.Tk()

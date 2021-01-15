@@ -2,17 +2,14 @@
 # -*- coding: utf-8 -*-
 
 ################################################ Graphes ##############################################
-
 import networkx
-from bokeh.io import output_notebook, show, save
+from bokeh.io import show, save
 from bokeh.plotting import figure
 from bokeh.plotting import from_networkx
-from bokeh.io import output_notebook, show, save
-from bokeh.models import Range1d, Circle, ColumnDataSource, MultiLine
-from bokeh.palettes import Blues8, Reds8, Purples8, Oranges8, Viridis8, Spectral8
+from bokeh.models import Range1d, Circle, MultiLine
+from bokeh.palettes import Blues8
 from bokeh.transform import linear_cmap
-from bokeh.models import EdgesAndLinkedNodes, NodesAndLinkedEdges
-from networkx.algorithms import community
+from bokeh.models import NodesAndLinkedEdges
 
 def Grap(df_graphe):
     
@@ -30,7 +27,7 @@ def Grap(df_graphe):
     edge_highlight_color = 'black'
     
     #On ajuste les petits noeuds pour qu'ils soient toujours visible
-    number_to_adjust_by = 5
+    number_to_adjust_by = 7
     adjusted_node_size = dict([(node, degree+number_to_adjust_by) for node, degree in networkx.degree(G)])
     networkx.set_node_attributes(G, name='adjusted_node_size', values=adjusted_node_size)
     

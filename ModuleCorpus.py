@@ -113,15 +113,6 @@ class Document():
     def voca(self,texte):
         texte=texte.split(" ")
         return texte
-    
-    def count(self, liste):
-        compteur=dict()
-        for i in liste:
-            if i not in compteur.keys():
-                compteur[i]=1
-            else:
-                compteur[i]+=1
-        return compteur
      
     def __str__(self):
         return "Document " + self.getType() + " : " + self.title
